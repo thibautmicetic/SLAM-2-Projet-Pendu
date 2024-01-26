@@ -58,6 +58,7 @@
     <Compile Include="Jeu.Designer.cs">
       <DependentUpon>Jeu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Partie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -116,8 +117,6 @@
   <ItemGroup>
     <None Include="Resources\C9.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

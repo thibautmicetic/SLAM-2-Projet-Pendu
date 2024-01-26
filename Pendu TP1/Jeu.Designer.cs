@@ -58,8 +58,10 @@
             this.txt_diff = new System.Windows.Forms.TextBox();
             this.pnom = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_pendu = new System.Windows.Forms.PictureBox();
             this.boite_img = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boite_img)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +74,7 @@
             this.bouton_a.TabIndex = 0;
             this.bouton_a.Text = "A";
             this.bouton_a.UseVisualStyleBackColor = true;
+            this.bouton_a.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_b
             // 
@@ -82,6 +85,7 @@
             this.bouton_b.TabIndex = 1;
             this.bouton_b.Text = "B";
             this.bouton_b.UseVisualStyleBackColor = true;
+            this.bouton_b.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_c
             // 
@@ -92,6 +96,7 @@
             this.bouton_c.TabIndex = 2;
             this.bouton_c.Text = "C";
             this.bouton_c.UseVisualStyleBackColor = true;
+            this.bouton_c.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_f
             // 
@@ -102,6 +107,7 @@
             this.bouton_f.TabIndex = 5;
             this.bouton_f.Text = "F";
             this.bouton_f.UseVisualStyleBackColor = true;
+            this.bouton_f.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_e
             // 
@@ -112,6 +118,7 @@
             this.bouton_e.TabIndex = 4;
             this.bouton_e.Text = "E";
             this.bouton_e.UseVisualStyleBackColor = true;
+            this.bouton_e.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_d
             // 
@@ -122,6 +129,7 @@
             this.bouton_d.TabIndex = 3;
             this.bouton_d.Text = "D";
             this.bouton_d.UseVisualStyleBackColor = true;
+            this.bouton_d.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_l
             // 
@@ -132,6 +140,7 @@
             this.bouton_l.TabIndex = 11;
             this.bouton_l.Text = "L";
             this.bouton_l.UseVisualStyleBackColor = true;
+            this.bouton_l.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_k
             // 
@@ -142,6 +151,7 @@
             this.bouton_k.TabIndex = 10;
             this.bouton_k.Text = "K";
             this.bouton_k.UseVisualStyleBackColor = true;
+            this.bouton_k.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_j
             // 
@@ -152,6 +162,7 @@
             this.bouton_j.TabIndex = 9;
             this.bouton_j.Text = "J";
             this.bouton_j.UseVisualStyleBackColor = true;
+            this.bouton_j.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_i
             // 
@@ -162,6 +173,7 @@
             this.bouton_i.TabIndex = 8;
             this.bouton_i.Text = "I";
             this.bouton_i.UseVisualStyleBackColor = true;
+            this.bouton_i.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_h
             // 
@@ -172,6 +184,7 @@
             this.bouton_h.TabIndex = 7;
             this.bouton_h.Text = "H";
             this.bouton_h.UseVisualStyleBackColor = true;
+            this.bouton_h.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_g
             // 
@@ -182,6 +195,7 @@
             this.bouton_g.TabIndex = 6;
             this.bouton_g.Text = "G";
             this.bouton_g.UseVisualStyleBackColor = true;
+            this.bouton_g.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_m
             // 
@@ -192,6 +206,7 @@
             this.bouton_m.TabIndex = 12;
             this.bouton_m.Text = "M";
             this.bouton_m.UseVisualStyleBackColor = true;
+            this.bouton_m.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_z
             // 
@@ -202,6 +217,7 @@
             this.bouton_z.TabIndex = 25;
             this.bouton_z.Text = "Z";
             this.bouton_z.UseVisualStyleBackColor = true;
+            this.bouton_z.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_y
             // 
@@ -212,6 +228,7 @@
             this.bouton_y.TabIndex = 24;
             this.bouton_y.Text = "Y";
             this.bouton_y.UseVisualStyleBackColor = true;
+            this.bouton_y.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_x
             // 
@@ -222,6 +239,7 @@
             this.bouton_x.TabIndex = 23;
             this.bouton_x.Text = "X";
             this.bouton_x.UseVisualStyleBackColor = true;
+            this.bouton_x.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_w
             // 
@@ -232,6 +250,7 @@
             this.bouton_w.TabIndex = 22;
             this.bouton_w.Text = "W";
             this.bouton_w.UseVisualStyleBackColor = true;
+            this.bouton_w.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_v
             // 
@@ -242,6 +261,7 @@
             this.bouton_v.TabIndex = 21;
             this.bouton_v.Text = "V";
             this.bouton_v.UseVisualStyleBackColor = true;
+            this.bouton_v.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_u
             // 
@@ -252,6 +272,7 @@
             this.bouton_u.TabIndex = 20;
             this.bouton_u.Text = "U";
             this.bouton_u.UseVisualStyleBackColor = true;
+            this.bouton_u.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_t
             // 
@@ -262,6 +283,7 @@
             this.bouton_t.TabIndex = 19;
             this.bouton_t.Text = "T";
             this.bouton_t.UseVisualStyleBackColor = true;
+            this.bouton_t.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_s
             // 
@@ -272,6 +294,7 @@
             this.bouton_s.TabIndex = 18;
             this.bouton_s.Text = "S";
             this.bouton_s.UseVisualStyleBackColor = true;
+            this.bouton_s.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_r
             // 
@@ -282,6 +305,7 @@
             this.bouton_r.TabIndex = 17;
             this.bouton_r.Text = "R";
             this.bouton_r.UseVisualStyleBackColor = true;
+            this.bouton_r.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_q
             // 
@@ -292,6 +316,7 @@
             this.bouton_q.TabIndex = 16;
             this.bouton_q.Text = "Q";
             this.bouton_q.UseVisualStyleBackColor = true;
+            this.bouton_q.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_p
             // 
@@ -302,6 +327,7 @@
             this.bouton_p.TabIndex = 15;
             this.bouton_p.Text = "P";
             this.bouton_p.UseVisualStyleBackColor = true;
+            this.bouton_p.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_o
             // 
@@ -312,6 +338,7 @@
             this.bouton_o.TabIndex = 14;
             this.bouton_o.Text = "O";
             this.bouton_o.UseVisualStyleBackColor = true;
+            this.bouton_o.Click += new System.EventHandler(this.btn_Click);
             // 
             // bouton_n
             // 
@@ -322,6 +349,7 @@
             this.bouton_n.TabIndex = 13;
             this.bouton_n.Text = "N";
             this.bouton_n.UseVisualStyleBackColor = true;
+            this.bouton_n.Click += new System.EventHandler(this.btn_Click);
             // 
             // nom_pendu
             // 
@@ -330,6 +358,7 @@
             this.nom_pendu.Name = "nom_pendu";
             this.nom_pendu.Size = new System.Drawing.Size(419, 20);
             this.nom_pendu.TabIndex = 26;
+            this.nom_pendu.TextChanged += new System.EventHandler(this.nom_pendu_TextChanged);
             // 
             // txt_diff
             // 
@@ -356,9 +385,18 @@
             this.panel1.Size = new System.Drawing.Size(267, 140);
             this.panel1.TabIndex = 30;
             // 
+            // pb_pendu
+            // 
+            this.pb_pendu.Location = new System.Drawing.Point(83, 29);
+            this.pb_pendu.Name = "pb_pendu";
+            this.pb_pendu.Size = new System.Drawing.Size(350, 231);
+            this.pb_pendu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_pendu.TabIndex = 29;
+            this.pb_pendu.TabStop = false;
+            this.pb_pendu.Click += new System.EventHandler(this.boite_img_Click);
+            // 
             // boite_img
             // 
-            this.boite_img.Image = global::Pendu_TP1.Properties.Resources.C1;
             this.boite_img.Location = new System.Drawing.Point(83, 29);
             this.boite_img.Name = "boite_img";
             this.boite_img.Size = new System.Drawing.Size(350, 231);
@@ -373,7 +411,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.boite_img);
+            this.Controls.Add(this.pb_pendu);
             this.Controls.Add(this.nom_pendu);
             this.Controls.Add(this.bouton_z);
             this.Controls.Add(this.bouton_y);
@@ -406,6 +444,7 @@
             this.Load += new System.EventHandler(this.Jeu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boite_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -443,7 +482,8 @@
         private System.Windows.Forms.TextBox nom_pendu;
         private System.Windows.Forms.TextBox txt_diff;
         private System.Windows.Forms.TextBox pnom;
-        private System.Windows.Forms.PictureBox boite_img;
+        private System.Windows.Forms.PictureBox pb_pendu;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox boite_img;
     }
 }
