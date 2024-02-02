@@ -14,6 +14,7 @@ namespace Pendu_TP1
     public partial class Jeu : Form
     {
         Partie P;
+        List<string> listeMotaTrouver;
         public Jeu()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Pendu_TP1
 
         private void init()
         {
-            List<string> listeMotaTrouver = new List<string> { "Francophile", "Chlorophylle", "Conspirateur", "Qualification", "Attraction", "Cornemuse", "Tourisme", "Diapason", "Brouhaha" };
+            listeMotaTrouver = new List<string> { "Francophile", "Chlorophylle", "Conspirateur", "Qualification", "Attraction", "Cornemuse", "Tourisme", "Diapason", "Brouhaha" };
             P.choisirMotATrouver(listeMotaTrouver);
             P.genererMotAfficher();
             nom_pendu.Text = P.motaafficher;
@@ -33,6 +34,8 @@ namespace Pendu_TP1
         {
             P.verifier(((Button)sender).Text.ToString(), nom_pendu);
             P.changerIMG(pb_pendu);
+            ((Button)sender).Enabled = false;
+            P.victoire(this, nom_pendu, listeMotaTrouver, pb_pendu);
         }
 
         private void Jeu_Load(object sender, EventArgs e)

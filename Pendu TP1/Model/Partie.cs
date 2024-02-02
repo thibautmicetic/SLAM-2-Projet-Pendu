@@ -64,15 +64,27 @@ namespace Pendu_TP1.Model
             char[] cArray = motatrouver.ToCharArray();
             char[] motaff = motaafficher.ToCharArray();
 
+            motaafficher = "";
+            bool goodCaracter = false;
+
             for (int i = 0; i < cArray.Length; i++)
             {
                 if (cArray[i] == Convert.ToChar(lettretape))
                 {
                     motaafficher += lettretape;
+                    goodCaracter = true;
                 }
-                else
+                else 
+                {
                     motaafficher += motaff[i];
+                }
             }
+
+            if (!goodCaracter)
+            {
+                nbEssaisChanger();
+            }
+
             txt_afficher.Text = motaafficher;
         }
 
@@ -93,8 +105,65 @@ namespace Pendu_TP1.Model
             Random aleatoire = new Random();
             int nbAleatoire = aleatoire.Next(listeATrouver.Count);
             motatrouver = listeATrouver[nbAleatoire].ToUpper();
-            
         }
+
+        public void victoire(Form formulaireJeuActif, TextBox txt_motAafficher, List<string> listeMotaTrouver, PictureBox pbpendu)
+        {
+            DialogResult msg = new DialogResult();
+            if(nbEssais > 8)
+            {
+                msg = MessageBox.Show("Vous avez perdu !! \r\nVous deviez trouver le mot: " + motatrouver + "\r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
+
+            if (txt_motAafficher.Text == motatrouver && nbEssais < 9)
+            {
+                msg = MessageBox.Show("Vous avez gagné !! \r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
+
+            if (msg == DialogResult.Yes)
+            {
+                remiseAZero(formulaireJeuActif, txt_motAafficher, listeMotaTrouver, pbpendu);
+                Form1 Accueil = new Form1();
+                Accueil.Show();
+                formulaireJeuActif.Hide();
+            }
+
+            if(msg == DialogResult.No)
+            {
+                formulaireJeuActif.Hide();
+            }
+        }
+
+        public void remiseAZero(Form formulaireJeuActif, TextBox txt_motAafficher, List<String> listeMotaTrouver, PictureBox pb_pendu)
+        {
+            //Mettre à vide les attribut motaafficher et motatrouver
+            motaafficher = "";
+            motatrouver = "";
+
+            //Mettre le nombre d’essais à 1
+            nbEssais = 1;
+
+            //Choisir un nouveau mot à trouver
+            choisirMotATrouver(listeMotaTrouver);
+
+            //Générer un nouveau mot à afficher
+            txt_motAafficher.Text = motaafficher;
+
+            foreach (Control c in formulaireJeuActif.Controls)
+            {
+                if (c.GetType() == typeof(Button))
+                    c.Enabled = true;
+            }
+
+            nbEssais = 0;
+
+        }
+
+        private void nbEssaisChanger()
+        {
+            nbEssais++;
+        }
+
 
     }
 }
