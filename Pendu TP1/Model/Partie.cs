@@ -12,6 +12,11 @@ namespace Pendu_TP1.Model
         public Int32 nbEssais;
         public String motaafficher;
         public String motatrouver;
+        private bool partieEnCours = true;
+        public bool PartieEnCours
+        {
+            get { return partieEnCours; }
+        }
 
         public void changerIMG(PictureBox pb_pendu)
         {
@@ -107,17 +112,19 @@ namespace Pendu_TP1.Model
             motatrouver = listeATrouver[nbAleatoire].ToUpper();
         }
 
-        public void victoire(Form formulaireJeuActif, TextBox txt_motAafficher, List<string> listeMotaTrouver, PictureBox pbpendu)
+        public void victoire(Form formulaireJeuActif, TextBox txt_motAafficher, TextBox txt_timer, List<string> listeMotaTrouver, PictureBox pbpendu)
         {
             DialogResult msg = new DialogResult();
             if(nbEssais > 8)
             {
-                msg = MessageBox.Show("Vous avez perdu !! \r\nVous deviez trouver le mot: " + motatrouver + "\r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                partieEnCours = false;
+                msg = MessageBox.Show("Vous avez perdu !! \r\nTemps écoulé :" + txt_timer.Text + "\r\nVous deviez trouver le mot: " + motatrouver + "\r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
 
             if (txt_motAafficher.Text == motatrouver && nbEssais < 9)
             {
-                msg = MessageBox.Show("Vous avez gagné !! \r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                partieEnCours = false;
+                msg = MessageBox.Show("Vous avez gagné !! \r\nTemps écoulé : " + txt_timer.Text + "\r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
 
             if (msg == DialogResult.Yes)
@@ -158,12 +165,10 @@ namespace Pendu_TP1.Model
             nbEssais = 0;
 
         }
-
         private void nbEssaisChanger()
         {
             nbEssais++;
         }
-
 
     }
 }

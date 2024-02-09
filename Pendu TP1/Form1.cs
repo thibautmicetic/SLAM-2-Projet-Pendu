@@ -12,6 +12,8 @@ namespace Pendu_TP1
 {
     public partial class Form1 : Form
     {
+
+        Jeu J;
         public Form1()
         {
             InitializeComponent();
@@ -59,7 +61,8 @@ namespace Pendu_TP1
 
                 else
                 {
-                    Jeu J = new Jeu();
+                    string nomComplet = txt_prenom.Text + " " + txt_nom.Text;
+                    J = new Jeu(nomComplet, comboBox_difficulte.Text);
                     J.Show();
                     this.Hide();
                 }
@@ -98,6 +101,12 @@ namespace Pendu_TP1
         private void txt_nom_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void fermerForm()
+        {
+            this.Hide();
+            J.Hide();
         }
     }
 }

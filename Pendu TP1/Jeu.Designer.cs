@@ -55,11 +55,16 @@
             this.bouton_o = new System.Windows.Forms.Button();
             this.bouton_n = new System.Windows.Forms.Button();
             this.nom_pendu = new System.Windows.Forms.TextBox();
-            this.txt_diff = new System.Windows.Forms.TextBox();
-            this.pnom = new System.Windows.Forms.TextBox();
+            this.txt_difficulte = new System.Windows.Forms.TextBox();
+            this.txt_nom_prenom = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_difficulteChoisie = new System.Windows.Forms.Label();
+            this.lbl_nomPrenomJoueur = new System.Windows.Forms.Label();
             this.pb_pendu = new System.Windows.Forms.PictureBox();
             this.boite_img = new System.Windows.Forms.PictureBox();
+            this.lbl_timer = new System.Windows.Forms.Label();
+            this.txt_timer = new System.Windows.Forms.TextBox();
+            this.dureeCout = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boite_img)).BeginInit();
@@ -67,7 +72,7 @@
             // 
             // bouton_a
             // 
-            this.bouton_a.Location = new System.Drawing.Point(44, 334);
+            this.bouton_a.Location = new System.Drawing.Point(44, 349);
             this.bouton_a.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_a.Name = "bouton_a";
             this.bouton_a.Size = new System.Drawing.Size(30, 23);
@@ -78,7 +83,7 @@
             // 
             // bouton_b
             // 
-            this.bouton_b.Location = new System.Drawing.Point(74, 334);
+            this.bouton_b.Location = new System.Drawing.Point(74, 349);
             this.bouton_b.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_b.Name = "bouton_b";
             this.bouton_b.Size = new System.Drawing.Size(30, 23);
@@ -89,7 +94,7 @@
             // 
             // bouton_c
             // 
-            this.bouton_c.Location = new System.Drawing.Point(104, 334);
+            this.bouton_c.Location = new System.Drawing.Point(104, 349);
             this.bouton_c.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_c.Name = "bouton_c";
             this.bouton_c.Size = new System.Drawing.Size(30, 23);
@@ -100,7 +105,7 @@
             // 
             // bouton_f
             // 
-            this.bouton_f.Location = new System.Drawing.Point(194, 334);
+            this.bouton_f.Location = new System.Drawing.Point(194, 349);
             this.bouton_f.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_f.Name = "bouton_f";
             this.bouton_f.Size = new System.Drawing.Size(30, 23);
@@ -111,7 +116,7 @@
             // 
             // bouton_e
             // 
-            this.bouton_e.Location = new System.Drawing.Point(164, 334);
+            this.bouton_e.Location = new System.Drawing.Point(164, 349);
             this.bouton_e.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_e.Name = "bouton_e";
             this.bouton_e.Size = new System.Drawing.Size(30, 23);
@@ -122,7 +127,7 @@
             // 
             // bouton_d
             // 
-            this.bouton_d.Location = new System.Drawing.Point(134, 334);
+            this.bouton_d.Location = new System.Drawing.Point(134, 349);
             this.bouton_d.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_d.Name = "bouton_d";
             this.bouton_d.Size = new System.Drawing.Size(30, 23);
@@ -133,7 +138,7 @@
             // 
             // bouton_l
             // 
-            this.bouton_l.Location = new System.Drawing.Point(373, 334);
+            this.bouton_l.Location = new System.Drawing.Point(373, 349);
             this.bouton_l.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_l.Name = "bouton_l";
             this.bouton_l.Size = new System.Drawing.Size(30, 23);
@@ -144,7 +149,7 @@
             // 
             // bouton_k
             // 
-            this.bouton_k.Location = new System.Drawing.Point(343, 334);
+            this.bouton_k.Location = new System.Drawing.Point(343, 349);
             this.bouton_k.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_k.Name = "bouton_k";
             this.bouton_k.Size = new System.Drawing.Size(30, 23);
@@ -155,7 +160,7 @@
             // 
             // bouton_j
             // 
-            this.bouton_j.Location = new System.Drawing.Point(313, 334);
+            this.bouton_j.Location = new System.Drawing.Point(313, 349);
             this.bouton_j.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_j.Name = "bouton_j";
             this.bouton_j.Size = new System.Drawing.Size(30, 23);
@@ -166,7 +171,7 @@
             // 
             // bouton_i
             // 
-            this.bouton_i.Location = new System.Drawing.Point(283, 334);
+            this.bouton_i.Location = new System.Drawing.Point(283, 349);
             this.bouton_i.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_i.Name = "bouton_i";
             this.bouton_i.Size = new System.Drawing.Size(30, 23);
@@ -177,7 +182,7 @@
             // 
             // bouton_h
             // 
-            this.bouton_h.Location = new System.Drawing.Point(253, 334);
+            this.bouton_h.Location = new System.Drawing.Point(253, 349);
             this.bouton_h.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_h.Name = "bouton_h";
             this.bouton_h.Size = new System.Drawing.Size(30, 23);
@@ -188,7 +193,7 @@
             // 
             // bouton_g
             // 
-            this.bouton_g.Location = new System.Drawing.Point(223, 334);
+            this.bouton_g.Location = new System.Drawing.Point(223, 349);
             this.bouton_g.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_g.Name = "bouton_g";
             this.bouton_g.Size = new System.Drawing.Size(30, 23);
@@ -199,7 +204,7 @@
             // 
             // bouton_m
             // 
-            this.bouton_m.Location = new System.Drawing.Point(403, 334);
+            this.bouton_m.Location = new System.Drawing.Point(403, 349);
             this.bouton_m.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_m.Name = "bouton_m";
             this.bouton_m.Size = new System.Drawing.Size(30, 23);
@@ -210,7 +215,7 @@
             // 
             // bouton_z
             // 
-            this.bouton_z.Location = new System.Drawing.Point(433, 374);
+            this.bouton_z.Location = new System.Drawing.Point(433, 389);
             this.bouton_z.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_z.Name = "bouton_z";
             this.bouton_z.Size = new System.Drawing.Size(30, 23);
@@ -221,7 +226,7 @@
             // 
             // bouton_y
             // 
-            this.bouton_y.Location = new System.Drawing.Point(403, 374);
+            this.bouton_y.Location = new System.Drawing.Point(403, 389);
             this.bouton_y.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_y.Name = "bouton_y";
             this.bouton_y.Size = new System.Drawing.Size(30, 23);
@@ -232,7 +237,7 @@
             // 
             // bouton_x
             // 
-            this.bouton_x.Location = new System.Drawing.Point(373, 374);
+            this.bouton_x.Location = new System.Drawing.Point(373, 389);
             this.bouton_x.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_x.Name = "bouton_x";
             this.bouton_x.Size = new System.Drawing.Size(30, 23);
@@ -243,7 +248,7 @@
             // 
             // bouton_w
             // 
-            this.bouton_w.Location = new System.Drawing.Point(343, 374);
+            this.bouton_w.Location = new System.Drawing.Point(343, 389);
             this.bouton_w.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_w.Name = "bouton_w";
             this.bouton_w.Size = new System.Drawing.Size(30, 23);
@@ -254,7 +259,7 @@
             // 
             // bouton_v
             // 
-            this.bouton_v.Location = new System.Drawing.Point(313, 374);
+            this.bouton_v.Location = new System.Drawing.Point(313, 389);
             this.bouton_v.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_v.Name = "bouton_v";
             this.bouton_v.Size = new System.Drawing.Size(30, 23);
@@ -265,7 +270,7 @@
             // 
             // bouton_u
             // 
-            this.bouton_u.Location = new System.Drawing.Point(283, 374);
+            this.bouton_u.Location = new System.Drawing.Point(283, 389);
             this.bouton_u.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_u.Name = "bouton_u";
             this.bouton_u.Size = new System.Drawing.Size(30, 23);
@@ -276,7 +281,7 @@
             // 
             // bouton_t
             // 
-            this.bouton_t.Location = new System.Drawing.Point(253, 374);
+            this.bouton_t.Location = new System.Drawing.Point(253, 389);
             this.bouton_t.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_t.Name = "bouton_t";
             this.bouton_t.Size = new System.Drawing.Size(30, 23);
@@ -287,7 +292,7 @@
             // 
             // bouton_s
             // 
-            this.bouton_s.Location = new System.Drawing.Point(224, 374);
+            this.bouton_s.Location = new System.Drawing.Point(224, 389);
             this.bouton_s.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_s.Name = "bouton_s";
             this.bouton_s.Size = new System.Drawing.Size(30, 23);
@@ -298,7 +303,7 @@
             // 
             // bouton_r
             // 
-            this.bouton_r.Location = new System.Drawing.Point(194, 374);
+            this.bouton_r.Location = new System.Drawing.Point(194, 389);
             this.bouton_r.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_r.Name = "bouton_r";
             this.bouton_r.Size = new System.Drawing.Size(30, 23);
@@ -309,7 +314,7 @@
             // 
             // bouton_q
             // 
-            this.bouton_q.Location = new System.Drawing.Point(164, 374);
+            this.bouton_q.Location = new System.Drawing.Point(164, 389);
             this.bouton_q.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_q.Name = "bouton_q";
             this.bouton_q.Size = new System.Drawing.Size(30, 23);
@@ -320,7 +325,7 @@
             // 
             // bouton_p
             // 
-            this.bouton_p.Location = new System.Drawing.Point(134, 374);
+            this.bouton_p.Location = new System.Drawing.Point(134, 389);
             this.bouton_p.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_p.Name = "bouton_p";
             this.bouton_p.Size = new System.Drawing.Size(30, 23);
@@ -331,7 +336,7 @@
             // 
             // bouton_o
             // 
-            this.bouton_o.Location = new System.Drawing.Point(104, 374);
+            this.bouton_o.Location = new System.Drawing.Point(104, 389);
             this.bouton_o.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_o.Name = "bouton_o";
             this.bouton_o.Size = new System.Drawing.Size(30, 23);
@@ -342,7 +347,7 @@
             // 
             // bouton_n
             // 
-            this.bouton_n.Location = new System.Drawing.Point(74, 374);
+            this.bouton_n.Location = new System.Drawing.Point(74, 389);
             this.bouton_n.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.bouton_n.Name = "bouton_n";
             this.bouton_n.Size = new System.Drawing.Size(30, 23);
@@ -360,30 +365,52 @@
             this.nom_pendu.TabIndex = 26;
             this.nom_pendu.TextChanged += new System.EventHandler(this.nom_pendu_TextChanged);
             // 
-            // txt_diff
+            // txt_difficulte
             // 
-            this.txt_diff.Enabled = false;
-            this.txt_diff.Location = new System.Drawing.Point(32, 85);
-            this.txt_diff.Name = "txt_diff";
-            this.txt_diff.Size = new System.Drawing.Size(197, 20);
-            this.txt_diff.TabIndex = 27;
+            this.txt_difficulte.Enabled = false;
+            this.txt_difficulte.Location = new System.Drawing.Point(32, 85);
+            this.txt_difficulte.Name = "txt_difficulte";
+            this.txt_difficulte.Size = new System.Drawing.Size(197, 20);
+            this.txt_difficulte.TabIndex = 27;
             // 
-            // pnom
+            // txt_nom_prenom
             // 
-            this.pnom.Enabled = false;
-            this.pnom.Location = new System.Drawing.Point(32, 36);
-            this.pnom.Name = "pnom";
-            this.pnom.Size = new System.Drawing.Size(197, 20);
-            this.pnom.TabIndex = 28;
+            this.txt_nom_prenom.Enabled = false;
+            this.txt_nom_prenom.Location = new System.Drawing.Point(32, 36);
+            this.txt_nom_prenom.Name = "txt_nom_prenom";
+            this.txt_nom_prenom.Size = new System.Drawing.Size(197, 20);
+            this.txt_nom_prenom.TabIndex = 28;
+            this.txt_nom_prenom.TextChanged += new System.EventHandler(this.txt_nom_prenom_TextChanged);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pnom);
-            this.panel1.Controls.Add(this.txt_diff);
+            this.panel1.Controls.Add(this.lbl_difficulteChoisie);
+            this.panel1.Controls.Add(this.lbl_nomPrenomJoueur);
+            this.panel1.Controls.Add(this.txt_nom_prenom);
+            this.panel1.Controls.Add(this.txt_difficulte);
             this.panel1.Location = new System.Drawing.Point(521, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 140);
             this.panel1.TabIndex = 30;
+            // 
+            // lbl_difficulteChoisie
+            // 
+            this.lbl_difficulteChoisie.AutoSize = true;
+            this.lbl_difficulteChoisie.Location = new System.Drawing.Point(29, 69);
+            this.lbl_difficulteChoisie.Name = "lbl_difficulteChoisie";
+            this.lbl_difficulteChoisie.Size = new System.Drawing.Size(54, 13);
+            this.lbl_difficulteChoisie.TabIndex = 34;
+            this.lbl_difficulteChoisie.Text = "Difficulté :";
+            // 
+            // lbl_nomPrenomJoueur
+            // 
+            this.lbl_nomPrenomJoueur.AutoSize = true;
+            this.lbl_nomPrenomJoueur.Location = new System.Drawing.Point(29, 20);
+            this.lbl_nomPrenomJoueur.Name = "lbl_nomPrenomJoueur";
+            this.lbl_nomPrenomJoueur.Size = new System.Drawing.Size(45, 13);
+            this.lbl_nomPrenomJoueur.TabIndex = 33;
+            this.lbl_nomPrenomJoueur.Text = "Joueur :";
+            this.lbl_nomPrenomJoueur.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // pb_pendu
             // 
@@ -405,11 +432,39 @@
             this.boite_img.TabStop = false;
             this.boite_img.Click += new System.EventHandler(this.boite_img_Click);
             // 
+            // lbl_timer
+            // 
+            this.lbl_timer.AutoSize = true;
+            this.lbl_timer.Location = new System.Drawing.Point(550, 224);
+            this.lbl_timer.Name = "lbl_timer";
+            this.lbl_timer.Size = new System.Drawing.Size(39, 13);
+            this.lbl_timer.TabIndex = 31;
+            this.lbl_timer.Text = "Timer :";
+            this.lbl_timer.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txt_timer
+            // 
+            this.txt_timer.Location = new System.Drawing.Point(553, 240);
+            this.txt_timer.Name = "txt_timer";
+            this.txt_timer.Size = new System.Drawing.Size(100, 20);
+            this.txt_timer.TabIndex = 32;
+            // 
+            // dureeCout
+            // 
+            this.dureeCout.Location = new System.Drawing.Point(44, 312);
+            this.dureeCout.Maximum = 10;
+            this.dureeCout.Name = "dureeCout";
+            this.dureeCout.Size = new System.Drawing.Size(419, 23);
+            this.dureeCout.TabIndex = 33;
+            // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(856, 451);
+            this.Controls.Add(this.dureeCout);
+            this.Controls.Add(this.txt_timer);
+            this.Controls.Add(this.lbl_timer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pb_pendu);
             this.Controls.Add(this.nom_pendu);
@@ -439,6 +494,7 @@
             this.Controls.Add(this.bouton_c);
             this.Controls.Add(this.bouton_b);
             this.Controls.Add(this.bouton_a);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Jeu";
             this.Text = "Jeu";
             this.Load += new System.EventHandler(this.Jeu_Load);
@@ -480,10 +536,15 @@
         private System.Windows.Forms.Button bouton_o;
         private System.Windows.Forms.Button bouton_n;
         private System.Windows.Forms.TextBox nom_pendu;
-        private System.Windows.Forms.TextBox txt_diff;
-        private System.Windows.Forms.TextBox pnom;
+        private System.Windows.Forms.TextBox txt_difficulte;
+        private System.Windows.Forms.TextBox txt_nom_prenom;
         private System.Windows.Forms.PictureBox pb_pendu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox boite_img;
+        private System.Windows.Forms.Label lbl_timer;
+        private System.Windows.Forms.TextBox txt_timer;
+        private System.Windows.Forms.Label lbl_nomPrenomJoueur;
+        private System.Windows.Forms.Label lbl_difficulteChoisie;
+        private System.Windows.Forms.ProgressBar dureeCout;
     }
 }
