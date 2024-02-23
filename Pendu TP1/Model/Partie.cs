@@ -112,10 +112,10 @@ namespace Pendu_TP1.Model
             motatrouver = listeATrouver[nbAleatoire].ToUpper();
         }
 
-        public void victoire(Form formulaireJeuActif, TextBox txt_motAafficher, TextBox txt_timer, List<string> listeMotaTrouver, PictureBox pbpendu)
+        public void verifierVictoire(Form formulaireJeuActif, TextBox txt_motAafficher, TextBox txt_timer, List<string> listeMotaTrouver, PictureBox pbpendu)
         {
             DialogResult msg = new DialogResult();
-            if(nbEssais > 8)
+            if(nbEssais > 7)
             {
                 partieEnCours = false;
                 msg = MessageBox.Show("Vous avez perdu !! \r\nTemps écoulé :" + txt_timer.Text + "\r\nVous deviez trouver le mot: " + motatrouver + "\r\nVoulez vous faire une autre partie ??", "You loose", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
@@ -130,13 +130,13 @@ namespace Pendu_TP1.Model
             if (msg == DialogResult.Yes)
             {
                 remiseAZero(formulaireJeuActif, txt_motAafficher, listeMotaTrouver, pbpendu);
-                Form1 Accueil = new Form1();
-                Accueil.Show();
+                (System.Windows.Forms.Application.OpenForms["menu"] as menu).redemarrerJeu(new Form1());
                 formulaireJeuActif.Hide();
             }
 
             if(msg == DialogResult.No)
             {
+                (System.Windows.Forms.Application.OpenForms["menu"] as menu).closeChildForm();
                 formulaireJeuActif.Hide();
             }
         }

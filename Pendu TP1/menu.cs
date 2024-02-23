@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pendu_TP1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,17 @@ namespace Pendu_TP1
 {
     public partial class menu : Form
     {
-
-        Form1 form1;
+        sousFormulaire SF;
+        public Form activeForm = null;
+        
         public menu()
         {
             InitializeComponent();
             init();
         }
-
         private void init()
         {
-            form1 = new Form1();
+            SF = new sousFormulaire(pnl_SF);
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -35,19 +36,52 @@ namespace Pendu_TP1
 
         }
 
-        private void arreterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button_fermerForm1_Click(object sender, EventArgs e)
+        private void demarrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            form1.fermerForm();
+            SF.openChildForm(new Form1());
         }
+
+        public void redemarrerJeu(Form form)
+        {
+            SF.openChildForm(form);
+        }
+
+        private void arreterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void demarrerJeu(string nomPrenomJoeur, string difficultePartie)
+        {
+            openChildForm(new Jeu(nomPrenomJoeur, difficultePartie));
+        }
+
+        public void openChildForm(Form formEnfant)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+
+            activeForm = formEnfant;
+            formEnfant.TopLevel = false;
+            formEnfant.FormBorderStyle = FormBorderStyle.None;
+            formEnfant.Dock = DockStyle.Fill;
+            pnl_SF.Controls.Add(formEnfant);
+            pnl_SF.Tag = formEnfant;
+            formEnfant.BringToFront();
+            formEnfant.Show();
+        }
+
+        public void closeChildForm()
+        {
+            activeForm.Close();
+            SF.closeActiveForm();
+            
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace Pendu_TP1
         List<string> listeMotaTrouver;
         Timer timer;
         int timerPartie;
-        public Jeu(String nomPrenomJoueur, String difficultePartie)
+        public Jeu(string nomPrenomJoueur, string difficultePartie)
         {
             init();
             txt_nom_prenom.Text = nomPrenomJoueur;
@@ -52,7 +52,7 @@ namespace Pendu_TP1
             dureeCout.Value = 10;
             P.changerIMG(pb_pendu);
             ((Button)sender).Enabled = false;
-            P.victoire(this, nom_pendu, txt_timer, listeMotaTrouver, pb_pendu);
+            P.verifierVictoire(this, nom_pendu, txt_timer, listeMotaTrouver, pb_pendu);
         }
 
         public void gestionTimer(TextBox txt_timer)
@@ -72,7 +72,15 @@ namespace Pendu_TP1
                 txt_timer.Text = timerPartie.ToString() + "sec";
                 dureeCout.Increment(-1);
                 setDureeCount(dureeCout.Value);
+
+                if (P.nbEssais > 7)
+                {
+                    P.verifierVictoire(this, nom_pendu, txt_timer, listeMotaTrouver, pb_pendu);
+                    timer.Stop();
+                    txt_timer.Text = timerPartie.ToString() + "sec";
+                }
             }
+
             else
             {
                 timer.Stop();
