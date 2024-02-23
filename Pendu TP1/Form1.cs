@@ -14,6 +14,18 @@ namespace Pendu_TP1
     {
 
         Jeu J;
+        private string nomPrenom;
+        public string NomPrenom
+        {
+            get { return nomPrenom; }
+        }
+
+        private string difficulte;
+        public string Difficulte
+        {
+            get { return difficulte; }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -62,9 +74,9 @@ namespace Pendu_TP1
                 else
                 {
                     string nomComplet = txt_prenom.Text + " " + txt_nom.Text;
-                    J = new Jeu(nomComplet, comboBox_difficulte.Text);
-                    J.Show();
-                    this.Hide();
+                    nomPrenom = nomComplet;
+                    difficulte = comboBox_difficulte.Text;
+                    (System.Windows.Forms.Application.OpenForms["Menu"] as menu).demarrerJeu(nomComplet, comboBox_difficulte.Text);
                 }
         }
 
@@ -107,6 +119,11 @@ namespace Pendu_TP1
         {
             this.Hide();
             J.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
