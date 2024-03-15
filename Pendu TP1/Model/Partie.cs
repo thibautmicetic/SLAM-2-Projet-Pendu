@@ -130,9 +130,9 @@ namespace Pendu_TP1.Model
             if (msg == DialogResult.Yes)
             {
                 remiseAZero(formulaireJeuActif, txt_motAafficher, listeMotaTrouver, pbpendu);
-                string nomComplet = (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).NomPrenom;
+                string nomPrenom = (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).NomPrenom;
                 string difficulte = (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).Difficulte;
-                (System.Windows.Forms.Application.OpenForms["menu"] as menu).redemarrerJeu(new Jeu(nomComplet, difficulte));
+                (System.Windows.Forms.Application.OpenForms["menu"] as menu).demarrerJeu(nomPrenom, difficulte);
                 formulaireJeuActif.Hide();
             }
 

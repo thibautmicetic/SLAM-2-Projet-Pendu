@@ -27,9 +27,14 @@ namespace Pendu_TP1
         private void init()
         {
             InitializeComponent();
-            P = new Partie();
+            newPartie();
             initParams();
             initTime();
+        }
+
+        public void newPartie()
+        {
+            P = new Partie();
         }
 
         private void initParams()
@@ -96,11 +101,6 @@ namespace Pendu_TP1
                 P.changerIMG(pb_pendu);
                 dureeCout.Value = 10;
             }
-        }
-
-        public Partie newGame()
-        {
-            return new Partie();
         }
         private void Jeu_Load(object sender, EventArgs e)
         {
