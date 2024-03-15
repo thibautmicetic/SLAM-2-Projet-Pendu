@@ -80,6 +80,11 @@ namespace Pendu_TP1
                 }
         }
 
+        public void newGame() 
+        {
+            (System.Windows.Forms.Application.OpenForms["Menu"] as menu).demarrerJeu(nomPrenom, comboBox_difficulte.Text);
+        }
+
         private void txt_afficher_Click(object sender, EventArgs e)
         {
             

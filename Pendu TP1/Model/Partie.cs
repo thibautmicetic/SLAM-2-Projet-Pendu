@@ -138,7 +138,7 @@ namespace Pendu_TP1.Model
 
             if(msg == DialogResult.No)
             {
-                (System.Windows.Forms.Application.OpenForms["menu"] as menu).closeChildForm();
+                (System.Windows.Forms.Application.OpenForms["menu"] as menu).redemarrerJeu();
                 formulaireJeuActif.Hide();
             }
         }

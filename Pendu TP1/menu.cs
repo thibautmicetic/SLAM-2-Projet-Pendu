@@ -41,19 +41,24 @@ namespace Pendu_TP1
 
         }
 
-        private void demarrerToolStripMenuItem_Click(object sender, EventArgs e)
+        public void demarrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SF.openChildForm(new Form1());
+            SF.openChildForm(newForm());
         }
 
-        public void redemarrerJeu(Form form)
+        private Form1 newForm()
         {
-            SF.openChildForm(form);
+            return new Form1();
+        }
+
+        public void redemarrerJeu()
+        {
+            SF.openChildForm(newForm());
         }
 
         private void arreterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            closeChildForm();
         }
 
         public void demarrerJeu(string nomPrenomJoeur, string difficultePartie)
