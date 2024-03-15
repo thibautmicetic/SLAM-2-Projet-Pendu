@@ -58,12 +58,18 @@ namespace Pendu_TP1
 
         private void arreterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeChildForm();
+            if (activeForm != null)
+                closeChildForm();
         }
 
         public void demarrerJeu(string nomPrenomJoeur, string difficultePartie)
         {
             openChildForm(new Jeu(nomPrenomJoeur, difficultePartie));
+        }
+
+        private void afficherMots()
+        {
+            openChildForm(new FormMots());
         }
 
         public void openChildForm(Form formEnfant)
@@ -88,5 +94,9 @@ namespace Pendu_TP1
             
         }
 
+        private void afficherLesMotsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            afficherMots();
+        }
     }
 }

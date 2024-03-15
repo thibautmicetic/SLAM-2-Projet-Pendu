@@ -36,6 +36,7 @@
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_SF = new System.Windows.Forms.Panel();
+            this.afficherLesMotsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +84,8 @@
             // 
             // paramètresToolStripMenuItem
             // 
+            this.paramètresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherLesMotsToolStripMenuItem});
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
             this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.paramètresToolStripMenuItem.Text = "Paramètres";
@@ -100,6 +103,13 @@
             this.pnl_SF.Size = new System.Drawing.Size(872, 490);
             this.pnl_SF.TabIndex = 1;
             this.pnl_SF.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // afficherLesMotsToolStripMenuItem
+            // 
+            this.afficherLesMotsToolStripMenuItem.Name = "afficherLesMotsToolStripMenuItem";
+            this.afficherLesMotsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.afficherLesMotsToolStripMenuItem.Text = "Afficher les mots";
+            this.afficherLesMotsToolStripMenuItem.Click += new System.EventHandler(this.afficherLesMotsToolStripMenuItem_Click);
             // 
             // menu
             // 
@@ -129,5 +139,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem arreterToolStripMenuItem;
         public System.Windows.Forms.Panel pnl_SF;
+        private System.Windows.Forms.ToolStripMenuItem afficherLesMotsToolStripMenuItem;
     }
 }
